@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matokeo | Highland Secondary School</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header compact">
+    <div>
+      <p class="tag">Highland Secondary School</p>
+      <h1>Matokeo ya Wanafunzi</h1>
+    </div>
+    <nav class="top-nav">
+      <a href="INDEX.HTML">Home</a>
+      <a href="register.html">Register</a>
+      <a href="students.html">Students</a>
+    </nav>
+  </header>
+
+  <main class="container two-col">
+    <section class="panel">
+      <h2>Weka Matokeo</h2>
+      <form id="resultForm" class="form-grid">
+        <label>Registration No
+          <input type="text" id="resultRegNo" required />
+        </label>
+        <label>Somo
+          <input type="text" id="subject" required />
+        </label>
+        <label>Alama (0-100)
+          <input type="number" id="score" min="0" max="100" required />
+        </label>
+        <label>Term
+          <select id="term" required>
+            <option value="">Chagua</option>
+            <option>Term 1</option>
+            <option>Term 2</option>
+            <option>Term 3</option>
+          </select>
+        </label>
+        <label>Mwaka
+          <input type="number" id="year" min="2020" max="2100" required />
+        </label>
+        <button type="submit">Hifadhi Tokeo</button>
+      </form>
+      <p id="resultMsg" class="msg"></p>
+    </section>
+
+    <section class="panel">
+      <div class="row-head">
+        <h2>Tafuta na Print</h2>
+        <div class="inline-actions">
+          <input id="filterRegNo" type="text" placeholder="Ingiza Reg No" />
+          <button id="printBtn" type="button">Print Matokeo</button>
+        </div>
+      </div>
+      <div id="resultsTableWrap" class="table-wrap"></div>
+    </section>
+  </main>
+
+  <script src="results.js"></script>
+</body>
+</html>
